@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="A Simple Survery Form">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Makes site look nice on mobile devices apparently-->
+        <link rel="stylesheet" href="styles.css">
+        <title>Daniel's Language School Form</title>
+    </head>
+
+    <body>
+        <div class="main">
+
+            <header id="header">
+                <h1 id="title">Daniel's Language School Application Form</h1>
+                <p id="description">Please fill out this form to help me understand your learning needs.</p>
+            </header>
+
+            <form class="survey-form">
+                <div id="name-label">
+                    <label for="name" >Name (required)</label>
+                    <input type="text" id="name-label" name="fullname" placeholder="Enter your full name" required><!--"for" and "id" should be the same-->
+                </div>
+
+                <div id="email-label">
+                    <label for="email-label">Email (required)</label>
+                    <input type="email" id="email-label" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div id="number-label">
+                    <label  for="number-label">Phone number (required)</label>
+                    <input type="number" id="number-label" name="phonenumber" placeholder="Enter your phone number" min = 1  max = 20 required>
+                </div>
+
+                <div id="dropdown">
+                    <label for="dropdown">Which language do you want to learn?</label>
+                    <select id="dropdown" name="language">
+                        <option selected disabled>Choose language</option> <!-- found out from ->>https://stackoverflow.com/questions/22033922/how-to-show-disable-html-select-option-in-by-default-->
+                        <option value="russian">Arabic</option>
+                        <option value="french">French</option>
+                        <option value="german">German</option>
+                        <option value="japanese">Japanese</option>
+                        <option value="korean">Korean</option>
+                        <option value="portuguese">Portuguese</option>
+                        <option value="russian">Russian</option>
+                        <option value="spanish">Spanish</option>
+                    </select>
+                </div>
+
+                <div id="english-level">
+                    <label for="level">What is your English level?</label><br>
+                    <input type="radio" id="level" name="english-level" value="beginner" checked>
+                    <label for="beginner">Beginner</label><br>
+                    <input type="radio" id="beginner" name="english-level" value="intermediate">
+                    <label for="intermediate">Intermediate</label><br>
+                    <input type="radio" id="advanced" name="english-level" value="advanced">
+                    <label for="advanced">Advanced</label><br>
+                    <input type="radio" id="fluent" name="english-level" value="fluent">
+                    <label for="fluent">Fluent</label><br>
+                </div>
+
+                <div id="why-learn">
+                    <label >Why do you want to learn a new language?</label><br>
+                    <input type="checkbox" id="travel" name="travel" value="travel">
+                    <label for="travel">I want to travel.</label><br>
+                    <input type="checkbox" id="friend" name="friend" value="friend">
+                    <label for="friend"> I want to talk to a friend from another country.</label><br>
+                    <input type="checkbox" id="movies" name="movies" value="movies">
+                    <label for="movies"> I want to watch movies in another language.</label><br>
+                    <input type="checkbox" id="boredom" name="boredom" value="boredom">
+                    <label for="boredom"> I'm bored and want to learn a new language.</label><br>
+                    <input type="checkbox" id="culture" name="culture" value="culture">
+                    <label for="culture"> I'm interested in countries' culture and history.</label><br>
+                    <input type="checkbox" id="study" name="study" value="study">
+                    <label for="study"> I want to study abroad.</label><br>
+                </div>
+
+                <div id="other-info">
+
+                    <label for="other-info">Do you have any questions? (optional)</label><br>
+                    <textarea id="other-info" name="other-info" rows="4" cols="50" placeholder="Type your questions here..."></textarea>
+                    
+                </div>
+
+                <div>
+                    <button id="submit">Submit</button>
+                </div>                
+            </form>
+
+        </div>
+    </body>
+
+</html>
